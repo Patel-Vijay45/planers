@@ -1,0 +1,210 @@
+    @media screen and (max-width:1100px) and (min-width:899px) {
+         :root {
+            font-size: 56%;
+        }
+        body {
+            .container {
+                .home {
+                    .home-container {
+                        .right {
+                            .main-text {
+                                padding-right: 5%;
+                            }
+                        }
+                    }
+                }
+                .about {
+                    .about-container {
+                        .about-left {
+                            .about-left-container {
+                                .about-heading {
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .after-about {
+                    .after-about-heading {
+                        width: 70%;
+                        h2 {}
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:900px) {
+        body {
+            .container {
+                .phone-nav {
+                    display: flex;
+                }
+                .navigation {
+                    // display: none;
+                    .nav-container {
+                        .phone-nav-btn {
+                            display: block;
+                        }
+                        nav {
+                            display: none;
+                        }
+                        .phone-search {
+                            display: inline-block;
+                        }
+                    }
+                }
+                .home {
+                    // background: rgb(204, 134, 134);
+                    .home-container {
+                        width: 99%;
+                        flex-direction: column;
+                        .left {
+                            height: 80vh;
+                            width: 100%;
+                        }
+                        .left {
+                            .left-container {
+                                width: 100%;
+                                .card {
+                                    right: 0px;
+                                }
+                            }
+                        }
+                        .right {
+                            width: 100%;
+                            height: auto;
+                            text-align: center;
+                            .main-text {
+                                width: 90%;
+                                margin: auto;
+                                padding: 0;
+                            }
+                        }
+                    }
+                }
+                .about {
+                    // display: none;
+                    .about-container {
+                        gap: 30px;
+                        flex-direction: column;
+                        justify-content: center;
+                        .about-left {
+                            width: 90%;
+                            .about-left-container {
+                                .about-heading {
+                                    width: 100%;
+                                }
+                                .about-content {
+                                    grid-template-columns: 1fr;
+                                    grid-template-rows: repeat(4, 1fr);
+                                    .about-content-box {
+                                        p {
+                                            margin: 10px 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .about-right {
+                            width: 90%;
+                            align-self: center;
+                            .about-right-container {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .after-about {
+                    // display: none;
+                    .after-about-heading {
+                        width: 90%;
+                        h2 {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+                .product {
+                    .product-iteams {
+                        .product-iteams-container {
+                            grid-template-columns: repeat(2, 1fr);
+                            grid-template-rows: 1fr 1fr;
+                            .iteam-box {}
+                        }
+                    }
+                }
+                .testinomals {
+                    .testinomals-container {
+                        .testinomals-box {
+                            .testinomals-content {
+                                width: 100%;
+                                h3 {
+                                    margin-top: 10px;
+                                }
+                            }
+                            .testinomals-image {
+                                img {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:700px) {
+        body {
+            .container {
+                .after-home {
+                    .after-home-container {
+                        flex-direction: column;
+                        .after-home-box {
+                            width: 100%;
+                        }
+                    }
+                }
+                .product {
+                    .product-iteams {
+                        .product-iteams-container {
+                            grid-template-columns: 1fr;
+                            grid-template-rows: repeat(4, 1fr);
+                            .iteam-box {}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    @media screen and (max-width:400px) {
+        body {
+            .container {
+                .home {
+                    .home-container {
+                        .right {
+                            .main-text {
+                                padding: 10px;
+                            }
+                        }
+                        .left {
+                            .left-container {
+                                .card {
+                                    // right: 3px;
+                                    width: 45%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .about {
+                    .about-container {
+                        .about-right {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }

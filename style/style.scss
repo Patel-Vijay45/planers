@@ -1,0 +1,655 @@
+        $primary-color:#ffffff;
+        $secondary-color:#1ABC9C;
+        $third-color:#231836;
+        $text-color:#000000;
+        $font1: sans-serif;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            font-size: 62.5%;
+        }
+        
+        body {
+            // background: #000;
+            font-family: $font1;
+            .container {
+                .phone-nav {
+                    transform: translateX(-100%);
+                    z-index: 92;
+                    position: fixed;
+                    height: 100%;
+                    background: white;
+                    display: none;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    animation: 600ms linear both;
+                    li {
+                        // padding: 20px;
+                        // border: 2px solid red;
+                        list-style: none;
+                        padding: 20px;
+                        a {
+                            font-size: 3rem;
+                            color: black;
+                            text-decoration: none;
+                            // padding: 10px 30px;
+                            // border: 2px solid red;
+                        }
+                    }
+                }
+                @keyframes show-nav {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+                    100% {
+                        transform: translateX(0%);
+                    }
+                }
+                // navigation
+                .navigation {
+                    z-index: 93;
+                    padding: 20px 0;
+                    width: 100%;
+                    background: $primary-color;
+                    position: sticky;
+                    background: $primary-color;
+                    top: 0;
+                    .nav-container {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 90%;
+                        margin: auto;
+                        .phone-nav-btn {
+                            z-index: 92;
+                            display: none;
+                            width: 40px;
+                            height: 40px;
+                            flex-direction: column;
+                            position: relative;
+                            .phone-nav-btn-line {
+                                width: 90%;
+                                height: 2px;
+                                background: #000;
+                                // margin-top: 10px;
+                                position: absolute;
+                            }
+                            .line1 {
+                                top: 10px;
+                                animation: 600ms linear both;
+                            }
+                            .line2 {
+                                top: 20px;
+                            }
+                            .line3 {
+                                top: 30px;
+                                animation: 600ms linear both;
+                            }
+                            @keyframes nav-anim1 {
+                                0% {
+                                    top: 10px;
+                                }
+                                70% {
+                                    top: 20px;
+                                    transform: rotate(0deg);
+                                }
+                                100% {
+                                    top: 20px;
+                                    transform: rotate(45deg);
+                                }
+                            }
+                            @keyframes nav-anim2 {
+                                0% {
+                                    top: 30px;
+                                }
+                                70% {
+                                    top: 20px;
+                                    transform: rotate(0deg);
+                                }
+                                100% {
+                                    transform: rotate(-45deg);
+                                    top: 20px;
+                                }
+                            }
+                        }
+                        .phone-nav-btn:hover .line1 {
+                            // transform: rotate(45deg)
+                        }
+                        nav {
+                            font-size: 2rem;
+                            display: flex;
+                            align-items: center;
+                            li {
+                                cursor: pointer;
+                                list-style: none;
+                                display: inline;
+                                margin-left: 40px;
+                                font-weight: 500;
+                            }
+                            .search {
+                                text-align: center;
+                                background-color: $secondary-color;
+                                width: 50px;
+                                height: 30px;
+                                margin-left: 40px;
+                                display: inline-block;
+                                svg {
+                                    position: relative;
+                                    top: 50%;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                            li:hover {
+                                color: $secondary-color;
+                            }
+                        }
+                        .phone-search {
+                            text-align: center;
+                            background-color: $secondary-color;
+                            width: 50px;
+                            height: 30px;
+                            // margin-left: 40px;
+                            display: none;
+                            svg {
+                                position: relative;
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                        }
+                        .title {
+                            h1 {
+                                font-size: 3rem;
+                            }
+                        }
+                    }
+                }
+                // home
+                .home {
+                    background-color: $primary-color;
+                    width: 100%;
+                    // border: 2px solid red;
+                    .home-container {
+                        margin: 20px auto;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 90%;
+                        .left {
+                            width: 45%;
+                            .left-container {
+                                width: 90%;
+                                height: 90%;
+                                margin: auto;
+                                position: relative;
+                                .image {
+                                    border-radius: 20px;
+                                    width: 45%;
+                                    height: 40rem;
+                                    position: absolute;
+                                }
+                                #image1 {
+                                    transform: translateX(10%);
+                                    border: 3px solid $secondary-color;
+                                }
+                                #image2 {
+                                    z-index: 90;
+                                    width: 80%;
+                                    height: 90%;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%, -50%);
+                                    img {
+                                        width: 100%;
+                                        height: 100%;
+                                        border-radius: 20px;
+                                    }
+                                }
+                                #image3 {
+                                    // right: 0;
+                                    left: 100%;
+                                    transform: translateX(-110%);
+                                    bottom: 0;
+                                    border: 3px solid $text-color;
+                                }
+                                .card {
+                                    display: flex;
+                                    z-index: 91;
+                                    position: absolute;
+                                    right: 0;
+                                    width: 35%;
+                                    height: 50px;
+                                    border-radius: 10px;
+                                    justify-content: space-around;
+                                    align-items: center;
+                                    background: $primary-color;
+                                    right: -30px;
+                                    top: 5px;
+                                    box-shadow: 2px 1px 5px black;
+                                    .card-image {
+                                        width: 30%;
+                                        width: 40px;
+                                        height: 40px;
+                                        border-radius: 50%;
+                                        img {
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 50%;
+                                        }
+                                    }
+                                    .text {
+                                        // line-height: 0;
+                                        font-size: 15px;
+                                        width: 60%;
+                                    }
+                                }
+                            }
+                        }
+                        // .left {
+                        .right {
+                            width: 50%;
+                            height: 600px;
+                            .main-text {
+                                width: 80%;
+                                height: 70%;
+                                padding-right: 10%;
+                                font-size: 3rem;
+                                margin-top: 10%;
+                                h2 {
+                                    display: inline;
+                                }
+                                 :nth-child(2),
+                                 :nth-child(5) {
+                                    color: $secondary-color;
+                                }
+                                .define {
+                                    margin-top: 20px;
+                                    // margin-right: 10%;
+                                    p {
+                                        text-align: justify;
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                                .home-btn-parent {
+                                    width: 100%;
+                                    margin-top: 8%;
+                                    .home-btn {
+                                        // width: 40%;
+                                        display: inline-block;
+                                        text-align: center;
+                                        // box-sizing: content-box;
+                                        a {
+                                            border-radius: 5px;
+                                            padding: 12px 30px;
+                                            text-decoration: none;
+                                            font-size: 1.7rem;
+                                            min-width: 190px;
+                                            border: 2px solid $secondary-color;
+                                        }
+                                        a:hover {
+                                            color: $primary-color;
+                                            background: $secondary-color;
+                                        }
+                                        .home-btn1 {
+                                            color: $primary-color;
+                                            background: $secondary-color;
+                                        }
+                                        .home-btn2 {
+                                            color: $secondary-color;
+                                            background-color: $primary-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // after home
+                .after-home {
+                    width: 100%;
+                    .after-home-container {
+                        width: 90%;
+                        display: flex;
+                        margin: auto;
+                        justify-content: space-between;
+                        .after-home-box {
+                            margin: 10px;
+                            width: 30%;
+                            border-left: 4px solid $secondary-color;
+                            .after-home-content {
+                                h2 {
+                                    margin-left: 10px;
+                                    font-size: 3rem;
+                                    display: inline;
+                                }
+                            }
+                            .after-home-content-title {
+                                 :first-child {
+                                    font-size: 3.2rem;
+                                    color: $secondary-color;
+                                }
+                            }
+                            .after-home-content {
+                                margin: 10px;
+                                p {
+                                    margin: 10px 10px 10px 10px;
+                                    font-size: 1.6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                // About
+                .about {
+                    margin: 10vh 0;
+                    width: 100%;
+                    .about-container {
+                        width: 90%;
+                        margin: auto;
+                        display: flex;
+                        .about-left {
+                            width: 49%;
+                            display: flex;
+                            .about-left-container {
+                                // width: 80%;
+                                .about-heading {
+                                    width: 60%;
+                                    h2 {
+                                        line-height: 4rem;
+                                        font-size: 4.5rem;
+                                    }
+                                }
+                                .about-content {
+                                    // width: 80%;
+                                    margin: 20px 0;
+                                    display: grid;
+                                    grid-template-columns: repeat(2, 1fr);
+                                    grid-template-rows: repeat(2, 1fr);
+                                    grid-gap: 10px;
+                                    .about-content-box {
+                                        h2 {
+                                            font-size: 2rem;
+                                            vertical-align: middle;
+                                        }
+                                        p {
+                                            margin: 10px 20% 15px 0;
+                                            font-size: 1.4rem;
+                                        }
+                                    }
+                                }
+                                .about-btn {
+                                    a {
+                                        padding: 10px 30px;
+                                        min-width: 150px;
+                                        border-radius: 4px;
+                                        background: $secondary-color;
+                                        text-decoration: none;
+                                        color: $primary-color;
+                                        font-size: 1.7rem;
+                                    }
+                                }
+                            }
+                        }
+                        .about-right {
+                            display: flex;
+                            width: 49%;
+                            .about-right-container {
+                                width: 70%;
+                                height: 500px;
+                                margin: auto;
+                                position: relative;
+                                .about-rightimage1 {
+                                    z-index: 91;
+                                    border-radius: 10px;
+                                    width: 95%;
+                                    height: 95%;
+                                    position: absolute;
+                                    img {
+                                        border-radius: 10px;
+                                        width: 100%;
+                                        height: 100%;
+                                    }
+                                }
+                                .about-rightimage2 {
+                                    z-index: 90;
+                                    width: 60%;
+                                    height: 70%;
+                                    position: absolute;
+                                    border: 2px solid rgb(4, 0, 255);
+                                    right: 0;
+                                    bottom: 0;
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+                // after about
+                .after-about {
+                    .after-about-heading {
+                        width: 50%;
+                        margin: auto;
+                        h2 {
+                            text-align: center;
+                            font-size: 4rem;
+                        }
+                    }
+                    .after-about-image {
+                        width: 90%;
+                        margin: 30px auto;
+                        position: relative;
+                        border: 2px solid transparent;
+                        .after-about-imagebox {
+                            border-radius: 10px;
+                        }
+                        .after-about-imagebox1 {
+                            position: absolute;
+                            z-index: 90;
+                            width: 30%;
+                            height: 70%;
+                            bottom: 0;
+                            border: 3px solid $secondary-color;
+                        }
+                        .after-about-imagebox2 {
+                            width: 95%;
+                            z-index: 91;
+                            height: 500px;
+                            margin: 20px auto;
+                            position: relative;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        .after-about-imagebox3 {
+                            top: 0;
+                            right: 0;
+                            position: absolute;
+                            z-index: 90;
+                            width: 30%;
+                            height: 70%;
+                            border: 3px solid $text-color;
+                        }
+                    }
+                }
+                // products
+                .product {
+                    margin: 10vh;
+                    .product-heading {
+                        width: 90%;
+                        margin: auto;
+                        text-align: center;
+                        font-size: 3rem;
+                    }
+                    .product-iteams {
+                        margin: 20px auto;
+                        .product-iteams-container {
+                            width: 100%;
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-template-rows: 1fr;
+                            gap: 30px;
+                            .iteam-box {
+                                // width: 25%;
+                                img {
+                                    width: 100%;
+                                    height: 250px;
+                                }
+                                .iteam-detail {
+                                    h2 {
+                                        font-size: 2.4rem;
+                                        text-align: center;
+                                    }
+                                    p {
+                                        margin: 10px 0;
+                                        font-size: 2rem;
+                                        text-align: center;
+                                    }
+                                     :last-child {
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                // testinomals
+                .testinomals {
+                    width: 100%;
+                    .testinomals-heading {
+                        width: 90%;
+                        margin: auto;
+                        h2 {
+                            font-size: 3rem;
+                        }
+                    }
+                    .testinomals-container {
+                        width: 90%;
+                        margin: 20px auto;
+                        .testinomals-box {
+                            width: 100%;
+                            // height: 200px;
+                            background: $third-color;
+                            position: relative;
+                            color: $primary-color;
+                            .testinomals-content {
+                                width: 70%;
+                                padding: 20px;
+                                p {
+                                    display: inline;
+                                    font-size: 2rem;
+                                    list-style: 2.1rem;
+                                }
+                                .hello {
+                                    color: $secondary-color;
+                                    font-size: 4.3rem;
+                                    line-height: 3rem;
+                                }
+                                h3 {
+                                    font-size: 2.5rem;
+                                    text-align: end;
+                                    p {
+                                        font-size: 1.5rem;
+                                    }
+                                }
+                            }
+                            .testinomals-image {
+                                img {
+                                    right: 5%;
+                                    top: -25px;
+                                    position: absolute;
+                                    width: 250px;
+                                    height: 250px;
+                                }
+                            }
+                            .testinomals-square {
+                                width: 60px;
+                                height: 60px;
+                                position: absolute;
+                                border-radius: 10px;
+                            }
+                            .testinomals-square1 {
+                                bottom: -40px;
+                                left: -15px;
+                                border: 3px solid $text-color;
+                            }
+                            .testinomals-square2 {
+                                bottom: -50px;
+                                left: -25px;
+                                border: 3px solid $secondary-color;
+                            }
+                        }
+                        .slider-container {
+                            width: 90%;
+                            text-align: center;
+                            margin: auto;
+                            .slider-btn {
+                                width: 50px;
+                                display: inline-flex;
+                                margin: 10px;
+                                height: 50px;
+                                background: $secondary-color;
+                                font-size: 2rem;
+                                justify-content: center;
+                                align-items: center;
+                            }
+                            .slider-btn2 {
+                                background: #6b696c;
+                                color: $primary-color;
+                            }
+                        }
+                    }
+                }
+                // after-testinomals
+                .after-testinomals {
+                    margin-top: 5vh;
+                    width: 100%;
+                    height: 200px;
+                    .after-testinomals-box {
+                        padding: 20px 0;
+                        width: 85%;
+                        margin: auto;
+                        background: $secondary-color;
+                        border-radius: 10px;
+                        .aftr-testinomals-heading {
+                            font-size: 2rem;
+                            // margin-top: 20px;
+                            text-align: center;
+                        }
+                        p {
+                            font-size: 1.6rem;
+                            color: $primary-color;
+                            width: 60%;
+                            margin: 10px auto;
+                            text-align: center;
+                        }
+                        .after-testinomals-btn {
+                            margin: 30px 0 10px 0;
+                            text-align: center;
+                            .after-testinomals-link {
+                                font-size: 2rem;
+                                padding: 10px 20px;
+                                border-radius: 4px;
+                                text-decoration: none;
+                                margin: auto;
+                                color: $primary-color;
+                                background: $third-color;
+                            }
+                        }
+                    }
+                }
+                // footer
+                .footer {
+                    margin-top: 5vh;
+                    width: 100%;
+                    h2 {
+                        font-size: 4rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
